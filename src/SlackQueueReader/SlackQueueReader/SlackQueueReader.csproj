@@ -42,6 +42,12 @@
     <Reference Include="Configurator">
       <HintPath>..\packages\Configurator.1.0.0\lib\Configurator.dll</HintPath>
     </Reference>
+    <Reference Include="Elasticsearch.Net">
+      <HintPath>..\packages\Elasticsearch.Net.1.0.2\lib\Elasticsearch.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Nest">
+      <HintPath>..\packages\NEST.1.0.2\lib\Nest.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -55,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\IndexHandler.cs" />
     <Compile Include="Handlers\SlackMessageHandler.cs" />
     <Compile Include="IMessageHandler.cs" />
     <Compile Include="Program.cs" />
@@ -62,7 +69,9 @@
     <Compile Include="SlackMessage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
